@@ -1,2 +1,7 @@
 # advent-of-code-2017-kt
-Advent of Code 2017, my participation with added challenge: must use Kotlin.
+
+My personal little _Advent of Code 2017_ participation.
+Ergo, __spoilers__ :wink:
+
+I've challenged myself to use Kotlin for all solutions,
+to practice the language.
