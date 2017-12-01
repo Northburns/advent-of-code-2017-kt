@@ -1,34 +1,37 @@
 package aoc2017
 
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 class Day1Test {
 
-    private val f1 = { input: String -> reverseCaptchaSum(input) }
+    private val f1 = { input: String ->
+        reverseCaptchaSum(input)
+    }
     private val f2 = ::reverseCaptchaSumHalfway
+
+    private val input = inputFile("day1.txt")
 
     @Test
     fun examplesPart1() {
-        assertEquals(3, f1("1122"))
-        assertEquals(4, f1("1111"))
-        assertEquals(0, f1("1234"))
-        assertEquals(9, f1("91212129"))
+        withFunction(f1) {
+            eq(3, "1122")
+            eq(4, "1111")
+            eq(0, "1234")
+            eq(9, "91212129")
+        }
+        println("Day 1, Part 1: ${f1(input)}")
     }
 
     @Test
     fun examplesPart2() {
-        assertEquals(6, f2("1212"))
-        assertEquals(0, f2("1221"))
-        assertEquals(4, f2("123425"))
-        assertEquals(12, f2("123123"))
-        assertEquals(4, f2("12131415"))
-    }
-
-    @Test
-    fun part1() {
-        printSolution("day1_1.txt", { it }, f1)
-        printSolution("day1_1.txt", { it }, f2)
+        withFunction(f2) {
+            eq(6, "1212")
+            eq(0, "1221")
+            eq(4, "123425")
+            eq(12, "123123")
+            eq(4, "12131415")
+        }
+        println("Day 1, Part 2: ${f2(input)}")
     }
 
 }

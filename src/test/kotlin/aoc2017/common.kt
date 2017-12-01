@@ -1,7 +1,6 @@
 package aoc2017
 
-import kotlin.test.Test
-
+import kotlin.test.assertEquals
 
 fun inputFile(fileName: String): String =
         ClassLoader
@@ -9,11 +8,16 @@ fun inputFile(fileName: String): String =
                 .readText()
                 .trim()
 
-fun <T> printSolution(
-        inputFileName: String,
-        fileToType: (String) -> T,
-        transform: (T) -> Any) =
-        println("$inputFileName: ${inputFile(inputFileName)
-                .let(fileToType)
-                .let(transform)}")
+fun <T, U> withFunction(
+        function: (T) -> U,
+        block: FunctionAsserter<T, U>.() -> Unit) {
+    FunctionAsserter(function).block()
+}
 
+class FunctionAsserter<T, U>(
+        private val function: (T) -> U) {
+
+    fun eq(expected: U, input: T) {
+        assertEquals(expected, function(input))
+    }
+}
