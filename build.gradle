@@ -1,0 +1,24 @@
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.0"
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        noJdk = true
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        noJdk = false
+    }
+}
+
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    testCompile "org.jetbrains.kotlin:kotlin-test"
+}
