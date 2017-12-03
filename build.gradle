@@ -17,7 +17,7 @@ compileTestKotlin {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
 
     testCompile "org.jetbrains.kotlin:kotlin-test-common"
     testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common"

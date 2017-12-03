@@ -1,5 +1,7 @@
 package aoc2017
 
+import aoc2017.common.Undefined
+
 fun reverseCaptchaSum(
         input: String,
         phase: Int = 1): Int =
@@ -12,7 +14,7 @@ fun reverseCaptchaSum(
 
 fun reverseCaptchaSumHalfway(input: String): Int {
     if (input.length % 2 != 0)
-        throw IllegalArgumentException("Undefined for odd length input.")
+        throw Undefined("Undefined for odd length input.")
     val phase = input.length / 2
 
     return reverseCaptchaSum(input, phase)
