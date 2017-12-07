@@ -45,3 +45,18 @@ fun Int.modulo(other: Int) = when {
         (this + phaseAboveZero).rem(other)
     }
 }
+
+fun <E> Collection<E>.allEqual(): Boolean {
+    if (isEmpty()) return true
+    val first = first()
+    return drop(1).find { it != first } == null
+}
+
+fun <E> Collection<E>.findOneNonEqual(): E? {
+    if (allEqual()) return null
+    if (size == 2) throw Undefined("Can't pick one non-equal when there's two elements.")
+
+    return groupBy { it }
+            .minBy { it.value.size }
+            ?.key
+}
