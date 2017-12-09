@@ -60,3 +60,8 @@ fun <E> Collection<E>.findOneNonEqual(): E? {
             .minBy { it.value.size }
             ?.key
 }
+
+fun <E> Collection<E>.only() = when {
+    size != 1 -> throw Undefined("'only' assumes size == 1 (was $size).")
+    else -> first()
+}
