@@ -22,7 +22,7 @@ class Day2Test {
         assertEquals(6, sheet.rows[2].checksum)
         assertEquals(18, sheet.checksum)
 
-        println("Day 2, Part 1: ${SpreadSheet(input).checksum}")
+        printSolution(2, 1, SpreadSheet(input).checksum, 41919)
     }
 
     @Test
@@ -40,7 +40,7 @@ class Day2Test {
         assertEquals(2, sheet.rows[2].divResult)
         assertEquals(9, sheet.divSum)
 
-        println("Day 2, Part 2: ${SpreadSheet(input).divSum}")
+        printSolution(2, 2, SpreadSheet(input).divSum, 303)
     }
 
 }

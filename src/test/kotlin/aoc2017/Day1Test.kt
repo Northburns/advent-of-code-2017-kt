@@ -19,7 +19,7 @@ class Day1Test {
             eq(0, "1234")
             eq(9, "91212129")
         }
-        println("Day 1, Part 1: ${f1(input)}")
+        printSolution(1, 1, f1(input), 1177)
     }
 
     @Test
@@ -31,7 +31,7 @@ class Day1Test {
             eq(12, "123123")
             eq(4, "12131415")
         }
-        println("Day 1, Part 2: ${f2(input)}")
+        printSolution(1, 2, f2(input), 1060)
     }
 
 }

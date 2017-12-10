@@ -66,7 +66,7 @@ class Day3Test {
         assertEquals(2, f(23))
         assertEquals(31, f(1024))
 
-        println("Day 3, Part 1: ${f(input)}")
+        printSolution(3, 1, f(input), 371)
     }
 
     @Test
@@ -81,7 +81,7 @@ class Day3Test {
         assertEquals(4, mem.valueAt(4))
         assertEquals(5, mem.valueAt(5))
 
-        println("Day 3, Part 2: $result")
+        printSolution(3, 2, result, 369601)
     }
 
 

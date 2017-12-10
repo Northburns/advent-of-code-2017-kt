@@ -46,9 +46,8 @@ class Day8Test {
         r.reset(input)
         r.stepThrough()
 
-        println("Day 3, Part 1: ${r.largestValue()}")
-
-        println("Day 3, Part 2: ${r.largestValueEver()}")
+        printSolution(8, 1, r.largestValue(), 4877)
+        printSolution(8, 2, r.largestValueEver(), 5471)
     }
 
 

@@ -36,8 +36,8 @@ class Day6Test {
 
         val (history, loopIndex) = Memory(input).redistributionHistoryUntilLoops()
 
-        println("Day 3, Part 1: ${history.last().redisributeCounter}")
-        println("Day 3, Part 2: ${history.size - loopIndex - 1}")
+        printSolution(6, 1, history.last().redisributeCounter, 12841)
+        printSolution(6, 2, history.size - loopIndex - 1, 8038)
 
         assertEquals(12841, history.last().redisributeCounter)
     }

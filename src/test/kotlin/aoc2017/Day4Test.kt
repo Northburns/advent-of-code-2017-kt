@@ -14,7 +14,7 @@ class Day4Test {
         assertFalse(isValidPassphrase1("aa bb cc dd aa"))
         assertTrue(isValidPassphrase1("aa bb cc dd aaa"))
 
-        println("Day 3, Part 1: ${input.filter(::isValidPassphrase1).count()}")
+        printSolution(4, 1, input.filter(::isValidPassphrase1).count(), 477)
     }
 
     @Test
@@ -25,7 +25,7 @@ class Day4Test {
         assertTrue(isValidPassphrase2("iiii oiii ooii oooi oooo"))
         assertFalse(isValidPassphrase2("oiii ioii iioi iiio"))
 
-        println("Day 3, Part 1: ${input.filter(::isValidPassphrase2).count()}")
+        printSolution(4, 2, input.filter(::isValidPassphrase2).count(), 167)
     }
 
 

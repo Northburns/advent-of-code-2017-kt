@@ -1,6 +1,5 @@
 package aoc2017
 
-import aoc2017.common.only
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -19,7 +18,7 @@ class Day9Test {
                 process("<!!>"),
                 process("<!!!>>"),
                 process("<{o\"i!a,<{i<a>"))
-                .map { it.only() }
+                .map { it.single() }
                 .forEach {
                     assertTrue("Should be garbage: $it") {
                         it is Garbage
@@ -30,12 +29,12 @@ class Day9Test {
 
     companion object {
         fun groupAssert(groupCount: Int, input: String) {
-            val group = process(input).only() as Group
+            val group = process(input).single() as Group
             assertEquals(groupCount, group.groupCount(), "$groupCount for $group")
         }
 
         fun scoreAssert(score: Int, input: String) {
-            val group = process(input).only() as Group
+            val group = process(input).single() as Group
             assertEquals(score, group.scoreTotal(), "$score for $group")
         }
     }
@@ -123,16 +122,16 @@ class Day9Test {
     @Test
     fun solution() {
         val solution = process(input)
-                .only() as Group
+                .single() as Group
         val scoreTotal = solution.scoreTotal()
 
         assertEquals(15922, scoreTotal)
-        println("Day 9, Part 1: $scoreTotal")
+        printSolution(9, 1, scoreTotal, 15922)
 
         val garbageCharacters = solution.garbageCharCount()
 
         assertEquals(7314, garbageCharacters)
-        println("Day 9, Part 2: $garbageCharacters")
+        printSolution(9, 2, garbageCharacters, 7314)
     }
 
 

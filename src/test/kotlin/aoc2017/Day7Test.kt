@@ -30,13 +30,13 @@ class Day7Test {
 
         assertEquals("tknk", t.rootProgram)
 
-        println("Day 3, Part 1: ${solution.rootProgram}")
+        printSolution(7, 1, solution.rootProgram, "qibuqqg")
 
         val solutionDisc = solution.findDeepestUnbalancedDisk()
         val (program, weightAdjustment) = solutionDisc.validateWeights()!!
         val targetWeight = program.weight + weightAdjustment
 
-        println("Day 3, Part 2: $targetWeight")
+        printSolution(7, 2, targetWeight, 1079)
     }
 
 

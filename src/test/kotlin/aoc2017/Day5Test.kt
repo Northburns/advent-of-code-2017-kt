@@ -32,8 +32,7 @@ class Day5Test {
         t.step()
         assertTrue(t.isOutside())
 
-
-        println("Day 3, Part 1: ${Trampolines(input).apply { stepUntilOutside() }.steps}")
+        printSolution(5, 1, Trampolines(input).apply { stepUntilOutside() }.steps, 373543)
     }
 
     @Test
@@ -44,7 +43,7 @@ class Day5Test {
         assertEquals(10, t.steps)
         assertEquals(intArrayOf(2, 3, 2, 3, -1).toList(), t.jumps.toList())
 
-        println("Day 3, Part 2: ${createWierderTrampoline(input).apply { stepUntilOutside() }.steps}")
+        printSolution(5, 2, createWierderTrampoline(input).apply { stepUntilOutside() }.steps, 27502966)
     }
 
 
