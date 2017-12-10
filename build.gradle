@@ -11,12 +11,14 @@ kotlin {
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
-        noJdk = true
+        allWarningsAsErrors = true
+        noJdk = false
     }
 }
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
+        allWarningsAsErrors = true
         noJdk = false
     }
 }

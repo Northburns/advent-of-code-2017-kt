@@ -20,7 +20,7 @@ class KnotHash(length: Int, val input: List<Int>) {
     var position = 0
     var skipSize = 0
 
-    var head = 0
+    private var head = 0
     fun step() {
         val length = input[head++]
 
@@ -36,14 +36,10 @@ class KnotHash(length: Int, val input: List<Int>) {
 
         private val standardInputSuffix = listOf(17, 31, 73, 47, 23)
 
-        fun IntArray.print(message: String = "") {
-            println("$message ${toList()}")
-        }
-
         fun IntArray.circularSubArray(startIndex: Int, length: Int): IntArray {
             if (length > size) throw Undefined("Subarray larger than original? Undefined.")
 
-            val part1 = sliceArray(startIndex.until(Math.min(startIndex + length, size)))
+            val part1 = sliceArray(startIndex.until(minOf(startIndex + length, size)))
             return when (length) {
                 part1.size -> part1
                 else -> part1 + sliceArray(0.until(length - part1.size))
@@ -52,7 +48,7 @@ class KnotHash(length: Int, val input: List<Int>) {
 
         fun IntArray.circularOverwrite(startIndex: Int, values: IntArray) {
             values.forEachIndexed { i, t ->
-                this[(i + startIndex) % size] = values[i]
+                this[(i + startIndex) % size] = t
             }
         }
 

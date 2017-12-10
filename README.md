@@ -5,4 +5,3 @@ Ergo, __spoilers__ :wink:
 
 I've challenged myself to use Kotlin for all solutions,
 to practice the language. 
-Also, just for fun, `noJdk=true` is in effect (sans test code).

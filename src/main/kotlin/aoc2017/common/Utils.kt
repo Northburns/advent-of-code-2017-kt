@@ -60,12 +60,3 @@ fun <E> Collection<E>.findOneNonEqual(): E? {
             .minBy { it.value.size }
             ?.key
 }
-
-@Deprecated(
-        "This is actually in the stdlib.",
-        ReplaceWith("single()"),
-        DeprecationLevel.WARNING)
-fun <E> Collection<E>.only() = when {
-    size != 1 -> throw Undefined("'only' assumes size == 1 (was $size).")
-    else -> first()
-}
