@@ -60,3 +60,5 @@ fun <E> Collection<E>.findOneNonEqual(): E? {
             .minBy { it.value.size }
             ?.key
 }
+
+fun Int.equalsAny(vararg others: Int) = others.find { this == it } != null
