@@ -18,13 +18,13 @@ class Day13Test {
     @Test
     fun part1() {
         assertEquals(24, sample.let(::toFirewall).stepThrough().second)
-        printSolution(12, 1, input.let(::toFirewall).stepThrough().second, 1704)
+        printSolution(13, 1, input.let(::toFirewall).stepThrough().second, 1704)
     }
 
     @Test
     fun part2() {
         assertEquals(10, smallestDelayToPassWithoutBeingCaught(sample))
-        printSolution(12, 2, smallestDelayToPassWithoutBeingCaught(input)!!)
+        printSolution(13, 2, smallestDelayToPassWithoutBeingCaught(input)!!)
     }
 }
 

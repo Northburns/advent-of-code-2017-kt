@@ -8,12 +8,21 @@ data class Coord2d(val x: Int, val y: Int) {
 
     fun manhattanDistance(to: Coord2d) = (x - to.x).absoluteValue + (y - to.y).absoluteValue
 
+    /**
+     * Includes diagonals
+     */
     fun neighbours() =
             ((x - 1)..(x + 1)).flatMap { x_ ->
                 ((y - 1)..(y + 1))
                         .filter { y_ -> !(x_ == x && y_ == y) }
                         .map { y_ -> Coord2d(x_, y_) }
             }
+
+    fun orthogonalNeighbours() = listOf(
+            Coord2d(x - 1, y),
+            Coord2d(x + 1, y),
+            Coord2d(x, y - 1),
+            Coord2d(x, y + 1))
 
 }
 
@@ -62,3 +71,11 @@ fun <E> Collection<E>.findOneNonEqual(): E? {
 }
 
 fun Int.equalsAny(vararg others: Int) = others.find { this == it } != null
+
+fun Int.toBinaryArray(length: Int): List<Boolean> = ((length - 1) downTo 0)
+        .fold(mutableListOf()) { acc, b ->
+            acc.also { it += this and (1 shl b) != 0 }
+        }
+
+fun List<Boolean>.toOnesAndZeroes(prefix: String = "[", postfix: String = "]", separator: String = "") =
+        joinToString(prefix = prefix, postfix = postfix, separator = separator) { if (it) "1" else "0" }

@@ -81,5 +81,10 @@ class KnotHash(length: Int, val input: List<Int>) {
 
     private fun denseHash() = string.toList().chunked(16) { it.reduce(Int::xor) }
 
+}
+
+class StandardKnotHash(val asciiInput: String) {
+
+    val hash by lazy { KnotHash(asciiInput).stepToResultPart2() }
 
 }
