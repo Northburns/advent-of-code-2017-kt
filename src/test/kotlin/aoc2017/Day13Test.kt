@@ -24,7 +24,7 @@ class Day13Test {
     @Test
     fun part2() {
         assertEquals(10, smallestDelayToPassWithoutBeingCaught(sample))
-        printSolution(13, 2, smallestDelayToPassWithoutBeingCaught(input)!!)
+        printSolution(13, 2, smallestDelayToPassWithoutBeingCaught(input)!!, 3970918)
     }
 }
 
