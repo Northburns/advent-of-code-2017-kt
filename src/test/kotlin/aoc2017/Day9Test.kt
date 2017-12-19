@@ -6,7 +6,7 @@ import kotlin.test.assertTrue
 
 class Day9Test {
 
-    private val input = inputFile("day9.txt")
+    private val input = inputFile("day9.txt").trim()
 
     @Test
     fun selfContainedPiecesOfGarbage() {

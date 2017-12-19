@@ -7,7 +7,6 @@ fun inputFile(fileName: String): String =
         ClassLoader
                 .getSystemResource("aoc2017/$fileName")
                 .readText()
-                .trim()
 
 fun <T : Any> printSolution(day: Int, part: Int, solution: T, assert: T? = null) {
     println("Day $day, Part $part: $solution")

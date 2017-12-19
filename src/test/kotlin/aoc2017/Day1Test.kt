@@ -9,7 +9,7 @@ class Day1Test {
     }
     private val f2 = ::reverseCaptchaSumHalfway
 
-    private val input = inputFile("day1.txt")
+    private val input = inputFile("day1.txt").trim()
 
     @Test
     fun examplesPart1() {

@@ -24,8 +24,40 @@ data class Coord2d(val x: Int, val y: Int) {
             Coord2d(x, y - 1),
             Coord2d(x, y + 1))
 
+    fun plus(dx: Int = 0, dy: Int = 0) = copy(x = x + dx, y = y + dy)
+
 }
 
+enum class OrthogonalDirection {
+
+    UP,
+    RIGHT,
+    DOWN,
+    LEFT;
+
+    fun clockwise() = when (this) {
+        UP -> RIGHT
+        RIGHT -> DOWN
+        DOWN -> LEFT
+        LEFT -> UP
+    }
+
+    fun counterClockwise() = when (this) {
+        UP -> LEFT
+        RIGHT -> UP
+        DOWN -> RIGHT
+        LEFT -> DOWN
+    }
+
+    fun from(position: Coord2d, distance: Int = 1) = when (this) {
+        UP -> position.plus(dy = distance)
+        RIGHT -> position.plus(dx = distance)
+        DOWN -> position.plus(dy = -distance)
+        LEFT -> position.plus(dx = -distance)
+    }
+}
+
+fun Coord2d.go(direction: OrthogonalDirection, distance: Int = 1) = direction.from(this, distance)
 
 /**
  * Return a copy of this list with elements "phased" by [phase].
