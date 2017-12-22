@@ -54,6 +54,13 @@ enum class OrthogonalDirection {
         DOWN -> position.plus(dy = -distance)
         LEFT -> position.plus(dx = -distance)
     }
+
+    fun opposite() = when (this) {
+        UP -> DOWN
+        RIGHT -> LEFT
+        DOWN -> UP
+        LEFT -> RIGHT
+    }
 }
 
 fun Coord2d.go(direction: OrthogonalDirection, distance: Int = 1) = direction.from(this, distance)

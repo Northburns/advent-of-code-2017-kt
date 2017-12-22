@@ -60,8 +60,8 @@ class Day21Test {
                     step(steps)
                     pixels.pixels.sumBy { it.count { it == FractalPixel.ON } }
                 }
-        printSolution(20, 1, pixelOnCount(5), 173)
-        printSolution(20, 1, pixelOnCount(18), 2456178)
+        printSolution(21, 1, pixelOnCount(5), 173)
+        printSolution(21, 1, pixelOnCount(18), 2456178)
     }
 
 }
