@@ -18,7 +18,7 @@ class Day23Test {
 
     @Test
     fun part2() {
-//        printSolution(23, 2, optimizedProgram())
+        printSolution(23, 2, optimizedProgram(), 903)
     }
 
 }

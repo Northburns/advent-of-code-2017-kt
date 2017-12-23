@@ -1,7 +1,7 @@
 package aoc2017
 
 import aoc2017.common.Undefined
-import kotlin.system.measureTimeMillis
+import kotlin.math.sqrt
 
 sealed class CcInstruction {
 
@@ -92,48 +92,22 @@ class CcRegistry(val program: List<CcInstruction>) {
 
 }
 
-@Suppress("VARIABLE_WITH_REDUNDANT_INITIALIZER")
-        /**
-         * Optimized by hand to Kotlin, oh my!
-         *
-         * Not 100% compliant with the original program:
-         *  * this assumes a = 1
-         *
-         * Of course this doesn't how the input was transformed to this...
-         */
-fun optimizedProgram(): Long {
-    // Registers
-    var h = 0L
+/**
+ * Optimized by hand to Kotlin, oh my!
+ *
+ * Of course this doesn't show the input was transformed to this...
+ */
+fun optimizedProgram(): Int {
+    // Program constants (a=1 is baked into them)
+    val min = 108400L
+    val step = 17L
+    val max = min + 1000L * step
+
+    fun Long.isComposite() =
+            (2..sqrt(this.toDouble()).toLong())
+                    .any { this % it == 0L }
 
     // Program
-    var b = 108400L
-    val c = b + 17000L
-
-    do {
-        var f = 1L
-        var g = 0L
-        var d = 2L
-        val innerTimeMillis = measureTimeMillis {
-            do {
-                var e = 2L
-                do {
-                    if ((d * e) == b)
-                        f = 0L
-                    e++
-                } while (e != b)
-                d++
-                g = d - b
-            } while (g != 0L)
-        }
-        println("OUTER: $innerTimeMillis")
-        if (f == 0L)
-            h++
-        g = b - c
-        if (g != 0L)
-            b += 17L
-        println("G: $g, H: $h")
-    } while (g != 0L)
-
-    // Return register H
-    return h
+    return (min..max step step).count { it.isComposite() }
 }
+
