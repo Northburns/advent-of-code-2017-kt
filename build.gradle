@@ -1,36 +1,40 @@
 
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.2.10"
+    id "org.jetbrains.kotlin.jvm" version "1.2.60" apply false
 }
 
-kotlin {
-    experimental {
-        coroutines 'enable'
+subprojects {
+    apply plugin: "org.jetbrains.kotlin.jvm"
+
+    kotlin {
+        experimental {
+            coroutines 'enable'
+        }
     }
-}
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-        allWarningsAsErrors = true
-        noJdk = false
+    compileKotlin {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            allWarningsAsErrors = true
+            noJdk = false
+        }
     }
-}
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-        allWarningsAsErrors = true
-        noJdk = false
+    compileTestKotlin {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            allWarningsAsErrors = true
+            noJdk = false
+        }
     }
-}
 
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib"
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
-    testCompile "org.jetbrains.kotlin:kotlin-test-common"
-    testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common"
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit"
-}
+        testImplementation "org.jetbrains.kotlin:kotlin-test-common"
+        testImplementation "org.jetbrains.kotlin:kotlin-test-annotations-common"
+        testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+    }
 
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
 }
