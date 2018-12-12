@@ -1,5 +1,5 @@
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-test-common"
-    implementation "org.jetbrains.kotlin:kotlin-test-annotations-common"
-    implementation "org.jetbrains.kotlin:kotlin-test-junit"
+    api "org.jetbrains.kotlin:kotlin-test-common"
+    api "org.jetbrains.kotlin:kotlin-test-annotations-common"
+    api "org.jetbrains.kotlin:kotlin-test-junit"
 }

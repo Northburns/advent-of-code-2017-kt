@@ -1,7 +1,5 @@
 package aoc2017
 
-import kotlin.coroutines.experimental.buildIterator
-
 /*
   Yikes, look at all those loops :)
 
@@ -39,7 +37,7 @@ data class Memory(
 
         val iMax = bankWithMostBlocks()
 
-        val redistrBank = buildIterator {
+        val redistrBank = iterator {
             var i = iMax
             while (true) {
                 i = i.nextBank()

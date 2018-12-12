@@ -1,27 +1,22 @@
 
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.2.60" apply false
+    id "org.jetbrains.kotlin.jvm" version "1.3.11" apply false
 }
 
 subprojects {
     apply plugin: "org.jetbrains.kotlin.jvm"
 
-    kotlin {
-        experimental {
-            coroutines 'enable'
-        }
-    }
     compileKotlin {
         kotlinOptions {
             jvmTarget = "1.8"
-            allWarningsAsErrors = true
+            allWarningsAsErrors = false
             noJdk = false
         }
     }
     compileTestKotlin {
         kotlinOptions {
             jvmTarget = "1.8"
-            allWarningsAsErrors = true
+            allWarningsAsErrors = false
             noJdk = false
         }
     }
