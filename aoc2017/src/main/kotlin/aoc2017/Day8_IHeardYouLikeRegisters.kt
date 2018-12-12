@@ -1,6 +1,6 @@
 package aoc2017
 
-import aoc2017.common.computeIfAbsentK
+import aoc.common.computeIfAbsentK
 import kotlin.math.max
 
 

@@ -1,4 +1,4 @@
-package aoc2017.common
+package aoc.common
 
 import kotlin.math.absoluteValue
 

@@ -1,4 +1,4 @@
-package aoc2017.common
+package aoc.common
 
 /*
   I have this added challenge of 'noJdk'. So, I end up re-implementing all really useful JDK methods here.

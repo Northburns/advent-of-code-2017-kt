@@ -1,6 +1,6 @@
 package aoc2017
 
-import aoc2017.common.Undefined
+import aoc.common.Undefined
 
 fun toPipes(input: String) = input
         .lines()

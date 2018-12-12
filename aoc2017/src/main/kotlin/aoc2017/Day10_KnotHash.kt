@@ -1,6 +1,6 @@
 package aoc2017
 
-import aoc2017.common.Undefined
+import aoc.common.Undefined
 
 
 class KnotHash(length: Int, val input: List<Int>) {

@@ -1,8 +1,8 @@
 package aoc2017
 
-import aoc2017.common.Coord2d
-import aoc2017.common.computeIfAbsentK
-import aoc2017.common.rotate
+import aoc.common.Coord2d
+import aoc.common.computeIfAbsentK
+import aoc.common.rotate
 
 /**
  * This class feels like such a mess, but I did end up with the right answers, so :shrug:

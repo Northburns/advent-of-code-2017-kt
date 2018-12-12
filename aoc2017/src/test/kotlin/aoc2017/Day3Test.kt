@@ -1,7 +1,9 @@
 package aoc2017
 
+import aoc.inputFile
+import aoc.printSolution
 import aoc2017.SpiralMemoryModel.Companion.ringCoordinateComponentArray
-import aoc2017.common.Coord2d
+import aoc.common.Coord2d
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

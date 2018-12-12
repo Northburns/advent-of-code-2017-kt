@@ -1,4 +1,4 @@
-package aoc2017.common
+package aoc.common
 
 
 data class Vector3d(val x: Long, val y: Long, val z: Long) {

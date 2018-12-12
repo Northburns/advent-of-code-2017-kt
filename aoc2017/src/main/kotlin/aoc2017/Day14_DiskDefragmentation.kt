@@ -1,7 +1,7 @@
 package aoc2017
 
-import aoc2017.common.Coord2d
-import aoc2017.common.toBinaryArray
+import aoc.common.Coord2d
+import aoc.common.toBinaryArray
 
 class Disk(input: String) {
 

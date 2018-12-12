@@ -1,8 +1,8 @@
 package aoc2017
 
-import aoc2017.common.Undefined
-import aoc2017.common.allEqual
-import aoc2017.common.findOneNonEqual
+import aoc.common.Undefined
+import aoc.common.allEqual
+import aoc.common.findOneNonEqual
 
 fun parseProgramsFromInput(input: String) = input
         .lines()

@@ -1,7 +1,7 @@
 package aoc2017
 
-import aoc2017.common.Undefined
-import aoc2017.common.rotate
+import aoc.common.Undefined
+import aoc.common.rotate
 
 class DanceLine(var line: List<String>) {
 

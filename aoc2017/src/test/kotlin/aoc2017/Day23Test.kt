@@ -1,5 +1,7 @@
 package aoc2017
 
+import aoc.inputFile
+import aoc.printSolution
 import kotlin.test.Test
 
 class Day23Test {

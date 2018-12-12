@@ -1,6 +1,6 @@
 package aoc2017
 
-import aoc2017.common.Undefined
+import aoc.common.Undefined
 
 /*
     Maybe a bit overkill, but it was fun.

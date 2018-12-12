@@ -1,4 +1,4 @@
-package aoc2017
+package aoc
 
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull

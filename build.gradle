@@ -28,10 +28,13 @@ subprojects {
 
     dependencies {
         implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    }
 
-        testImplementation "org.jetbrains.kotlin:kotlin-test-common"
-        testImplementation "org.jetbrains.kotlin:kotlin-test-annotations-common"
-        testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+    if (!name.startsWith('util')) {
+        dependencies {
+            implementation project(':util')
+            testImplementation project(':util-tests')
+        }
     }
 
     repositories {

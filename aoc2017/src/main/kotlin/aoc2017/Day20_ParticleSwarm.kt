@@ -1,6 +1,6 @@
 package aoc2017
 
-import aoc2017.common.Vector3d
+import aoc.common.Vector3d
 
 data class Particle(
         val index: Int,

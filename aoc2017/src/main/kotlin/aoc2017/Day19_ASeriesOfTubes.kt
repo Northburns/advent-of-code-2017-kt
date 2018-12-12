@@ -1,9 +1,9 @@
 package aoc2017
 
-import aoc2017.common.Coord2d
-import aoc2017.common.OrthogonalDirection
-import aoc2017.common.Undefined
-import aoc2017.common.go
+import aoc.common.Coord2d
+import aoc.common.OrthogonalDirection
+import aoc.common.Undefined
+import aoc.common.go
 import java.lang.Character.isLetter
 
 class NetworkDiagram(input: String) {
