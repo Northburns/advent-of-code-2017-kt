@@ -1,4 +1,4 @@
-package aoc2018.day1
+package aoc2018
 
 fun frequencyCalc(mods: List<Int>, starting: Int = 0): Int {
     return mods.foldRight(starting, Int::plus)

@@ -1,7 +1,5 @@
 package aoc2018
 
-import aoc2018.day1.frequencyCalc
-import aoc2018.day1.frequencyCalc2
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
